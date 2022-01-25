@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -L"
+    "start": "node index.js"
   },
   "author": "Nicolas",
   "license": "ISC",
@@ -22,7 +22,5 @@
     "pg": "^8.5.1",
     "sequelize": "^6.9.0"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.6"
-  }
+  "devDependencies": {}
 }
