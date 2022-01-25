@@ -5,7 +5,7 @@ const path = require("path"); //file system, viene con Windows, sin necesidad de
 const { DB_USER, DB_PASSWORD, DB_HOST } = process.env; //debo crear el archivo .env
 
 const sequelize = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/dfd5c9b2aipa8n`,
+  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/ddv05539nfo75c`,
   {
     logging: false, 
     native: false, 
