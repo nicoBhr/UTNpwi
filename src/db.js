@@ -4,13 +4,19 @@ const fs = require("fs"); //file system, viene con Windows, sin necesidad de ins
 const path = require("path"); //file system, viene con Windows, sin necesidad de instalarlo
 const { DB_USER, DB_PASSWORD, DB_HOST } = process.env; //debo crear el archivo .env
 
-const sequelize = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/ddv05539nfo75c`,
-  {
-    logging: false, 
-    native: false, 
-  }
-);
+const sequelize = new Sequelize({
+  database: "ddv05539nfo75c",
+  username: "bhqqivselvphen",
+  password: "695476cb68aff45a568f5ac4ae25326a29a0db7b6dd3ec5774bfe13723593bb8",
+  host: "ec2-34-233-157-189.compute-1.amazonaws.com",
+  port: 5432,
+  dialect: "postgres",
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false // <<<<<<< YOU NEED THIS
+    }}
+});
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
